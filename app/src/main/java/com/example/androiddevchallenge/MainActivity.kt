@@ -23,13 +23,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.graphics.Color
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navArgument
 import androidx.navigation.compose.rememberNavController
-import com.example.androiddevchallenge.models.Puppy
 import com.example.androiddevchallenge.ui.screen.DogDetail
 import com.example.androiddevchallenge.ui.screen.ListScreen
 import com.example.androiddevchallenge.ui.theme.MyTheme

@@ -43,10 +43,9 @@ import com.example.androiddevchallenge.data.dogs
 @Preview("Light Theme", widthDp = 360, heightDp = 640)
 @Composable
 fun ListScreen(navController: NavHostController) {
-    Scaffold() {
-        BoxWithConstraints() {
-            Column(
-            ) {
+    Scaffold {
+        BoxWithConstraints {
+            Column {
                 Text(
                     modifier =
                     Modifier.padding(all = 8.dp),

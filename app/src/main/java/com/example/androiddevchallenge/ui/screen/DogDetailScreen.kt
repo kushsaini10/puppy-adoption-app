@@ -39,9 +39,8 @@ import com.example.androiddevchallenge.data.dogs
 @Composable
 fun DogDetail(id: Int, navController: NavHostController) {
     val dog = dogs[id]
-    Scaffold(
-    ) {
-        Column() {
+    Scaffold {
+        Column {
             Image(
                 painterResource(dog.image),
                 contentDescription = "Image of ${dog.name}",
