@@ -37,7 +37,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.navigate
-import com.example.androiddevchallenge.dogs
+import com.example.androiddevchallenge.data.dogs
 
 @OptIn(ExperimentalFoundationApi::class)
 @Preview("Light Theme", widthDp = 360, heightDp = 640)

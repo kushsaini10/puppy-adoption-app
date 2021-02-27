@@ -32,7 +32,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.example.androiddevchallenge.R
-import com.example.androiddevchallenge.dogs
+import com.example.androiddevchallenge.data.dogs
 
 
 @Preview("Light Theme", widthDp = 360, heightDp = 640)
