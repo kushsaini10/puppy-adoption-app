@@ -34,7 +34,6 @@ import androidx.navigation.NavHostController
 import com.example.androiddevchallenge.R
 import com.example.androiddevchallenge.data.dogs
 
-
 @Preview("Light Theme", widthDp = 360, heightDp = 640)
 @Composable
 fun DogDetail(id: Int, navController: NavHostController) {
@@ -52,25 +51,31 @@ fun DogDetail(id: Int, navController: NavHostController) {
             Surface(
                 Modifier.padding(8.dp),
                 shape = RoundedCornerShape(50),
-                color = dog.color.copy(alpha = 0.2f)
+                color = dog.color.copy(alpha = 0.2f),
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.Center
+                    horizontalArrangement = Arrangement.Center,
                 ) {
-                    Text(dog.name, modifier = Modifier.padding(horizontal = 16.dp))
+                    Text(
+                        dog.name,
+                        modifier = Modifier.padding(horizontal = 16.dp),
+                    )
                 }
             }
             Surface(
                 Modifier.padding(8.dp),
                 shape = RoundedCornerShape(50),
-                color = dog.color.copy(alpha = 0.2f)
+                color = dog.color.copy(alpha = 0.2f),
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.Center
+                    horizontalArrangement = Arrangement.Center,
                 ) {
-                    Text(dog.age, modifier = Modifier.padding(horizontal = 16.dp))
+                    Text(
+                        dog.age,
+                        modifier = Modifier.padding(horizontal = 16.dp),
+                    )
                 }
             }
             Surface(
@@ -80,9 +85,12 @@ fun DogDetail(id: Int, navController: NavHostController) {
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.Center
+                    horizontalArrangement = Arrangement.Center,
                 ) {
-                    Text(dog.desc, modifier = Modifier.padding(horizontal = 16.dp))
+                    Text(
+                        dog.desc,
+                        modifier = Modifier.padding(horizontal = 16.dp),
+                    )
                 }
             }
         }
@@ -94,19 +102,19 @@ fun DogDetail(id: Int, navController: NavHostController) {
                     navController.popBackStack()
                 },
             shape = RoundedCornerShape(50),
-            color = MaterialTheme.colors.onSurface.copy(alpha = 0.5f)
+            color = MaterialTheme.colors.onSurface.copy(alpha = 0.5f),
         ) {
             Row(
                 horizontalArrangement = Arrangement.Center,
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .fillMaxHeight()
+                    .fillMaxHeight(),
             ) {
                 Icon(
                     painterResource(id = R.drawable.ic_arrow_back),
                     tint = Color.White,
-                    contentDescription = ""
+                    contentDescription = "Back",
                 )
             }
         }

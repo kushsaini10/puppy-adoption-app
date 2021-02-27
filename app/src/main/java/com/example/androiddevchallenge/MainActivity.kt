@@ -37,7 +37,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MyTheme {
-
                 Surface(color = MaterialTheme.colors.background) {
                     AppNavigator()
                 }
@@ -50,7 +49,9 @@ class MainActivity : AppCompatActivity() {
 fun AppNavigator() {
     val navController = rememberNavController()
     NavHost(navController, startDestination = "listScreen") {
-        composable("listScreen") { ListScreen(navController = navController) }
+        composable("listScreen") {
+            ListScreen(navController = navController)
+        }
         composable(
             "detailScreen/{id}",
             arguments = listOf(navArgument("id") {
@@ -58,7 +59,8 @@ fun AppNavigator() {
             })
         ) {
             DogDetail(
-                id = it.arguments?.getInt("id", 1) ?: 1, navController = navController
+                id = it.arguments?.getInt("id", 1) ?: 1,
+                navController = navController,
             )
         }
     }

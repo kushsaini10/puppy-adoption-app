@@ -25,7 +25,10 @@ import androidx.compose.foundation.lazy.GridCells
 import androidx.compose.foundation.lazy.LazyVerticalGrid
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.*
+import androidx.compose.material.Card
+import androidx.compose.material.Scaffold
+import androidx.compose.material.Surface
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -49,7 +52,9 @@ fun ListScreen(navController: NavHostController) {
                 Text(
                     modifier =
                     Modifier.padding(all = 8.dp),
-                    text = "Discover", fontSize = 20.sp, fontWeight = FontWeight.Bold,
+                    text = "Discover",
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Bold,
                 )
                 LazyVerticalGrid(
                     modifier = Modifier
@@ -58,11 +63,8 @@ fun ListScreen(navController: NavHostController) {
                     cells = GridCells.Fixed(2)
                 ) {
                     itemsIndexed(dogs) { position, dog ->
-                        Box(
-                            Modifier
-                                .padding(8.dp)
-                        ) {
-                            Column() {
+                        Box(Modifier.padding(8.dp)) {
+                            Column {
                                 Card(
                                     Modifier
                                         .fillMaxWidth()
@@ -77,7 +79,7 @@ fun ListScreen(navController: NavHostController) {
                                         contentScale = ContentScale.Crop,
                                         modifier = Modifier
                                             .fillMaxWidth()
-                                            .height(180.dp)
+                                            .height(180.dp),
                                     )
                                 }
                                 Surface(
@@ -87,11 +89,11 @@ fun ListScreen(navController: NavHostController) {
                                 ) {
                                     Row(
                                         verticalAlignment = Alignment.CenterVertically,
-                                        horizontalArrangement = Arrangement.Center
+                                        horizontalArrangement = Arrangement.Center,
                                     ) {
                                         Text(
                                             dog.name,
-                                            modifier = Modifier.padding(horizontal = 16.dp)
+                                            modifier = Modifier.padding(horizontal = 16.dp),
                                         )
                                     }
                                 }
