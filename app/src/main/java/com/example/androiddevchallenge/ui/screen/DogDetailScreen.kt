@@ -94,30 +94,51 @@ fun DogDetail(id: Int, navController: NavHostController) {
                 }
             }
         }
-        Surface(
-            Modifier
-                .size(56.dp)
-                .padding(8.dp)
-                .clickable {
-                    navController.popBackStack()
-                },
-            shape = RoundedCornerShape(50),
-            color = MaterialTheme.colors.onSurface.copy(alpha = 0.5f),
+        Row(
+            horizontalArrangement = Arrangement.SpaceBetween,
+            modifier = Modifier.fillMaxWidth(),
         ) {
-            Row(
-                horizontalArrangement = Arrangement.Center,
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .fillMaxHeight(),
+            Surface(
+                Modifier
+                    .size(56.dp)
+                    .padding(8.dp)
+                    .clickable {
+                        navController.popBackStack()
+                    },
+                shape = RoundedCornerShape(50),
+                color = MaterialTheme.colors.onSurface.copy(alpha = 0.5f),
             ) {
-                Icon(
-                    painterResource(id = R.drawable.ic_arrow_back),
-                    tint = Color.White,
-                    contentDescription = "Back",
-                )
+                Row(
+                    horizontalArrangement = Arrangement.Center,
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .fillMaxHeight(),
+                ) {
+                    Icon(
+                        painterResource(id = R.drawable.ic_arrow_back),
+                        tint = Color.White,
+                        contentDescription = "Back",
+                    )
+                }
+            }
+            Surface(
+                Modifier
+                    .padding(8.dp)
+                    .clickable { },
+                shape = RoundedCornerShape(50),
+                color = Color.Cyan,
+            ) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.Center,
+                ) {
+                    Text(
+                        "Adopt me!",
+                        modifier = Modifier.padding(horizontal = 16.dp),
+                    )
+                }
             }
         }
-
     }
 }
