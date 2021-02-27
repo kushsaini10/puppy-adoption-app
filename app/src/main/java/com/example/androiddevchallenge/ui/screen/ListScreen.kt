@@ -23,11 +23,11 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.GridCells
 import androidx.compose.foundation.lazy.LazyVerticalGrid
-import androidx.compose.foundation.lazy.items
-import androidx.compose.material.Card
-import androidx.compose.material.Scaffold
-import androidx.compose.material.Text
+import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
@@ -58,25 +58,20 @@ fun ListScreen(navController: NavHostController) {
                         .fillMaxHeight(),
                     cells = GridCells.Fixed(2)
                 ) {
-                    items(dogs) { dog ->
-                        BoxWithConstraints(
+                    itemsIndexed(dogs) { position, dog ->
+                        Box(
                             Modifier
                                 .padding(8.dp)
-//                            .clip(RoundedCornerShape(4.dp))
-//                            .background(Color.Cyan)
-                                .clickable(onClick = { /* Ignoring onClick */ })
                         ) {
-//                        Log.d("this.maxWidth.value", "${maxWidth} - ${maxWidth.div(2f)}")
-                            Card(
-                                Modifier
-                                    .fillMaxWidth()
-                                    .clickable {
-                                        navController.navigate("detailScreen/${dog.id}")
-                                    },
-//                                backgroundColor = Color.Cyan,
-                                elevation = 4.dp,
-                            ) {
-                                Column() {
+                            Column() {
+                                Card(
+                                    Modifier
+                                        .fillMaxWidth()
+                                        .clickable {
+                                            navController.navigate("detailScreen/${position}")
+                                        },
+                                    elevation = 4.dp,
+                                ) {
                                     Image(
                                         painterResource(dog.image),
                                         contentDescription = "Image of ${dog.name}",
@@ -85,13 +80,26 @@ fun ListScreen(navController: NavHostController) {
                                             .fillMaxWidth()
                                             .height(180.dp)
                                     )
-                                    Text(
-                                        dog.name, fontSize = 16.sp, modifier = Modifier
-                                            .padding(horizontal = 4.dp, vertical = 2.dp)
-                                    )
                                 }
+                                Surface(
+                                    Modifier.padding(top = 4.dp),
+                                    shape = RoundedCornerShape(50),
+                                    color = dog.color.copy(alpha = 0.2f),
+                                ) {
+                                    Row(
+                                        verticalAlignment = Alignment.CenterVertically,
+                                        horizontalArrangement = Arrangement.Center
+                                    ) {
+                                        Text(
+                                            dog.name,
+                                            modifier = Modifier.padding(horizontal = 16.dp)
+                                        )
+                                    }
+                                }
+
                             }
                         }
+
                     }
 
 

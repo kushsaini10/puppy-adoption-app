@@ -23,6 +23,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -67,45 +68,127 @@ fun AppNavigator() {
 
 var dogs: List<Puppy> = mutableListOf(
     Puppy(
-        id = 0,
         name = "Pupper",
         age = "2 months",
         desc = "Hey I am a strong puff, I like to play hide wuff seek with my hooman",
         image = R.drawable.dog_1,
+        color = Color.Cyan,
     ),
     Puppy(
-        id = 1,
         name = "Rodeo",
         age = "1 month",
         desc = "Hey I am a strong puff, I like to play hide wuff seek with my hooman",
         image = R.drawable.dog_4,
+        color = Color.Magenta,
     ),
     Puppy(
-        id = 2,
         name = "Coffee",
         age = "2 months",
         desc = "Hey I am a strong puff, I like to play hide wuff seek with my hooman",
         image = R.drawable.dog_5,
+        color = Color.Red,
     ),
     Puppy(
-        id = 3,
         name = "Pepper",
         age = "2 months",
         desc = "Hey I am a strong puff, I like to play hide wuff seek with my hooman",
         image = R.drawable.dog_6,
+        color = Color.Black,
     ),
     Puppy(
-        id = 4,
         name = "Doggo",
         age = "2 months",
         desc = "Hey I am a strong puff, I like to play hide wuff seek with my hooman",
         image = R.drawable.dog_7,
+        color = Color.Green,
     ),
     Puppy(
-        id = 5,
         name = "Doge",
         age = "2 months",
         desc = "Hey I am a strong puff, I like to play hide wuff seek with my hooman",
         image = R.drawable.dog_8,
+        color = Color.Blue,
+    ),Puppy(
+        name = "Pupper",
+        age = "2 months",
+        desc = "Hey I am a strong puff, I like to play hide wuff seek with my hooman",
+        image = R.drawable.dog_1,
+        color = Color.Cyan,
+    ),
+    Puppy(
+        name = "Rodeo",
+        age = "1 month",
+        desc = "Hey I am a strong puff, I like to play hide wuff seek with my hooman",
+        image = R.drawable.dog_4,
+        color = Color.Magenta,
+    ),
+    Puppy(
+        name = "Coffee",
+        age = "2 months",
+        desc = "Hey I am a strong puff, I like to play hide wuff seek with my hooman",
+        image = R.drawable.dog_5,
+        color = Color.Red,
+    ),
+    Puppy(
+        name = "Pepper",
+        age = "2 months",
+        desc = "Hey I am a strong puff, I like to play hide wuff seek with my hooman",
+        image = R.drawable.dog_6,
+        color = Color.Black,
+    ),
+    Puppy(
+        name = "Doggo",
+        age = "2 months",
+        desc = "Hey I am a strong puff, I like to play hide wuff seek with my hooman",
+        image = R.drawable.dog_7,
+        color = Color.Green,
+    ),
+    Puppy(
+        name = "Doge",
+        age = "2 months",
+        desc = "Hey I am a strong puff, I like to play hide wuff seek with my hooman",
+        image = R.drawable.dog_8,
+        color = Color.Blue,
+    ),Puppy(
+        name = "Pupper",
+        age = "2 months",
+        desc = "Hey I am a strong puff, I like to play hide wuff seek with my hooman",
+        image = R.drawable.dog_1,
+        color = Color.Cyan,
+    ),
+    Puppy(
+        name = "Rodeo",
+        age = "1 month",
+        desc = "Hey I am a strong puff, I like to play hide wuff seek with my hooman",
+        image = R.drawable.dog_4,
+        color = Color.Magenta,
+    ),
+    Puppy(
+        name = "Coffee",
+        age = "2 months",
+        desc = "Hey I am a strong puff, I like to play hide wuff seek with my hooman",
+        image = R.drawable.dog_5,
+        color = Color.Red,
+    ),
+    Puppy(
+        name = "Pepper",
+        age = "2 months",
+        desc = "Hey I am a strong puff, I like to play hide wuff seek with my hooman",
+        image = R.drawable.dog_6,
+        color = Color.Black,
+    ),
+    Puppy(
+        name = "Doggo",
+        age = "2 months",
+        desc = "Hey I am a strong puff, I like to play hide wuff seek with my hooman",
+        image = R.drawable.dog_7,
+        color = Color.Green,
+    ),
+    Puppy(
+        name = "Doge",
+        age = "2 months",
+        desc = "Hey I am a strong puff, I like to play hide wuff seek with my hooman",
+        image = R.drawable.dog_8,
+        color = Color.Blue,
     ),
 )

@@ -53,13 +53,37 @@ fun DogDetail(id: Int, navController: NavHostController) {
             Surface(
                 Modifier.padding(8.dp),
                 shape = RoundedCornerShape(50),
-                color = MaterialTheme.colors.onSurface.copy(alpha = 0.2f)
+                color = dog.color.copy(alpha = 0.2f)
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.Center
                 ) {
                     Text(dog.name, modifier = Modifier.padding(horizontal = 16.dp))
+                }
+            }
+            Surface(
+                Modifier.padding(8.dp),
+                shape = RoundedCornerShape(50),
+                color = dog.color.copy(alpha = 0.2f)
+            ) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.Center
+                ) {
+                    Text(dog.age, modifier = Modifier.padding(horizontal = 16.dp))
+                }
+            }
+            Surface(
+                Modifier.padding(8.dp),
+                shape = RoundedCornerShape(20),
+                color = dog.color.copy(alpha = 0.2f)
+            ) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.Center
+                ) {
+                    Text(dog.desc, modifier = Modifier.padding(horizontal = 16.dp))
                 }
             }
         }
