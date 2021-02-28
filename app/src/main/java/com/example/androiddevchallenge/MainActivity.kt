@@ -54,9 +54,11 @@ fun AppNavigator() {
         }
         composable(
             "detailScreen/{id}",
-            arguments = listOf(navArgument("id") {
-                type = NavType.IntType
-            })
+            arguments = listOf(
+                navArgument("id") {
+                    type = NavType.IntType
+                }
+            )
         ) {
             DogDetail(
                 id = it.arguments?.getInt("id", 1) ?: 1,

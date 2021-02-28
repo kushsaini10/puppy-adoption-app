@@ -77,7 +77,7 @@ fun ListScreen(navController: NavHostController) {
                                     Modifier
                                         .fillMaxWidth()
                                         .clickable {
-                                            navController.navigate("detailScreen/${position}")
+                                            navController.navigate("detailScreen/$position")
                                         },
                                     elevation = 4.dp,
                                 ) {
@@ -105,13 +105,9 @@ fun ListScreen(navController: NavHostController) {
                                         )
                                     }
                                 }
-
                             }
                         }
-
                     }
-
-
                 }
             }
         }
